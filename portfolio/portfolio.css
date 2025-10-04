@@ -1,0 +1,199 @@
+/* Reset + Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef, #dee2e6);
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #ff512f, #dd2476, #7b4397);
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+header h1 {
+  font-size: 3.2rem;
+  margin-bottom: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+header p {
+  font-size: 1.3rem;
+  color: #fefefe;
+}
+
+nav {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+nav a {
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 8px 12px;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #ffd166;
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffd166;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Sections */
+section {
+  padding: 70px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h2 {
+  margin-bottom: 40px;
+  color: #333;
+  font-size: 2.4rem;
+  border-left: 8px solid #ff512f;
+  padding-left: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Cards */
+.skills, .projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  transition: all 0.4s ease;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #dd2476;
+  font-size: 1.4rem;
+}
+
+.card p {
+  color: #555;
+  font-size: 1rem;
+}
+
+/* Contact Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  background: #fff;
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  max-width: 650px;
+  margin: 0 auto 40px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #ff512f;
+  outline: none;
+  transform: scale(1.02);
+}
+
+.contact-form button {
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+  color: #fff;
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.contact-form button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* Contact Links */
+.contact-links {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.contact-links a {
+  color: #ff512f;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 12px;
+  transition: color 0.3s ease;
+}
+
+.contact-links a:hover {
+  color: #7b4397;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #222;
+  color: #fefefe;
+  margin-top: 70px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  font-size: 0.95rem;
+}
